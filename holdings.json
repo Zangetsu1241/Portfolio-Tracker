@@ -1,0 +1,5 @@
+
+[
+  {"ticker": "AAPL", "shares": 10, "buy_price": 150.00},
+  {"ticker": "TSLA", "shares": 5,  "buy_price": 200.00}
+]

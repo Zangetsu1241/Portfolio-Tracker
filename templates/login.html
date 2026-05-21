@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portfolio Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .auth-toggle {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        .auth-toggle a {
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .auth-toggle a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: var(--loss);
+            font-size: 0.875rem;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="glass-panel auth-card">
+            <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                <h1>Portfoly</h1>
+            </div>
+            
+            <h2 id="authTitle" style="text-align: center;">Welcome Back</h2>
+            <p id="errorMsg" class="error-message">Invalid credentials.</p>
+
+            <form id="authForm" class="holding-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" id="authSubmitBtn" class="btn btn-primary full-width">Log In</button>
+            </form>
+
+            <div class="auth-toggle">
+                <span id="authToggleText">Don't have an account? </span>
+                <a id="authToggleLink">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/auth.js"></script>
+</body>
+</html>
